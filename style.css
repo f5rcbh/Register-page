@@ -1,0 +1,247 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1f212b;
+}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;1,100&display=swap');
+
+.container{
+    margin: 2rem;
+    height: 90vh;
+    border-radius: 10px;
+    background: linear-gradient(45deg  , rgb(0, 0, 0) , rgba(68, 65, 65, 0) )
+    ,linear-gradient(45deg  , rgb(0, 0, 0) , rgba(68, 65, 65, 0) )
+    ,linear-gradient(45deg  , rgb(0, 0, 0) , rgba(68, 65, 65, 0) ) 
+    , url(./img/bg-img.jpg) no-repeat center;
+    background-size: cover;
+    color: #fff;
+    word-wrap:break-word;
+    word-break:keep-all;
+}
+
+.card{
+    height: 100%;
+    padding: .5rem 0 0 3rem;
+}
+/* Nav section */
+ul{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+li{
+   padding-inline: 30px;
+    list-style: none;
+}
+li:nth-child(1){
+    color:#c18d3a;
+    font-size: 25px;
+    position: relative;
+    
+}
+li:nth-child(1)::before{
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    inset: 0;
+    left: -.2rem;
+    background-color: #c18d3a;
+    animation: bouns 2s linear infinite alternate;
+}
+@keyframes bouns {
+    to{
+        transform: scale(1.2);
+        background-color: #d98d14;
+    }
+}
+li:nth-child(2)>a,
+li:nth-child(3)>a{
+    color: rgba(255, 255, 255, 0.341);
+    cursor: pointer;
+    transition: all linear .250s;
+}
+li:nth-child(2)>a:hover,
+li:nth-child(3)>a:hover{
+    color: #fff;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: auto;
+}
+/* form section */
+.signUp{
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0 1rem 3rem;
+    flex-direction: column;
+    margin: auto;
+}
+.signUp p{
+    color: #525461;
+    
+}
+.signUp p:nth-child(1){
+    color: #676978;
+    padding: 20px 0 10px 0px;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 200;
+    
+}
+.signUp p:nth-child(3){
+    padding: 20px 0 10px 0;
+    font-family: 'Kanit', sans-serif;
+    text-transform: capitalize;
+}
+
+.signUp h1{
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.login{
+    color: #d98d1490;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all linear .250s;
+}
+
+.login:hover{
+    color: #d98d14;
+
+}
+
+/* form Section */
+
+form{
+    padding: 10px 20px 20px 0;
+}
+input,button{
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    padding: 10px ;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.Fname{
+    background: url(./img/id.svg) no-repeat 10rem;
+    background-size: 20px;
+    background-color: #52556472;
+}
+.Lname{
+    margin-left: 10px;
+    background: url(./img/id.svg) no-repeat 10rem;
+    background-size: 20px;
+    background-color: #52556472;
+}
+
+.email{
+    width: 100%;
+    background: url(./img/e-mail.svg) no-repeat 22.5rem;
+    background-size: 20px;
+    background-color: #52556472;
+}
+.password{
+    width: 100%;
+    background: url(./img/hidden\ password.svg) no-repeat 22.5rem;
+    background-size: 20px;
+    background-color: #52556472;
+}
+button{
+    margin: 10px 0;
+    width: 45%;
+    background-color: gray;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 100;
+}
+.create{
+    background-color: #d98d14;
+    float: right;
+}
+
+
+/* media */
+
+@media (max-width:700px) {
+    
+    .card{
+        margin: auto;
+    }
+    ul{
+        justify-content: center;
+        padding: 5px;
+    }
+    li{
+        padding-inline: 20px;
+        font-size: 10px;
+    }
+    li:nth-child(1){
+        font-size: 13px;
+    }
+    li:nth-child(1)::before{
+        width: 15px;
+        height: 15px;
+    }
+    .signUp{
+        padding: 10px 0 5px 0;
+        text-align: left;
+        margin: auto;
+        align-items: center;
+    }
+    .signUp p{
+        font-size: 10px;
+        text-align: center;
+    }
+    .signUp p:nth-child(1),
+    .signUp p:nth-child(3){
+        color: #b0b0b0;
+        padding: 10px 0 5px 0;
+    }
+   
+    .signUp h1{
+        font-size: 1.2rem;
+    }
+    form{
+        /* padding: 5px 10px 10px 0; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    input,button{
+        padding: 5px;
+    }
+    .text-input{
+        margin: auto;
+        text-align: center;
+    }
+    .Fname,.Lname,.email,.password{
+        background-size: 15px;
+    }
+    .Fname,.Lname{
+        background-position: 9.5rem;
+        margin-left: 0;
+    }
+    .email,.password{
+        background-position: 9.5rem;
+    }
+    button{
+        width: 100%;
+        display: flex;
+    }
+    .change{
+        background-color: #525461;
+    }
+}
